@@ -17,6 +17,8 @@ Featuring **16 specialized processing blocks**, independent **Series / Parallel 
 
 ## 📸 Architecture & Interface
 
+![MidiFlux Interface](docs/images/midiflux_screenshot.png)
+
 ```
 +----------------------------------------------------------------------------------------------------+
 |  mtyas MidiFlux     [ PRESET: 01 - Neoclassical Arps ]   [ SCALE SEQ: ON ]   [BYPASS] [PANIC] [🎲] |
