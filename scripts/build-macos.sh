@@ -23,7 +23,7 @@ cmake -B "$BUILD_DIR" \
 
 # 2. Compile in Parallel
 echo ">> Compiling plugins & standalone app..."
-cmake --build "$BUILD_DIR" --config Release --parallel
+cmake --build "$BUILD_DIR" --config Release --target MidiFlux_All MidiFlux_CLAP MidiFluxTests --parallel
 
 # 3. Run Automated Tests
 echo ">> Running unit verification tests..."

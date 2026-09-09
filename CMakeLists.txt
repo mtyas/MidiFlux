@@ -5,6 +5,8 @@ project(MidiFlux VERSION 1.0.0 LANGUAGES C CXX)
 set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
+add_compile_definitions(JUCE_WEB_BROWSER=0 JUCE_USE_CURL=0)
+
 # Add JUCE and CLAP extensions
 add_subdirectory(libs/JUCE EXCLUDE_FROM_ALL)
 add_subdirectory(libs/clap-juce-extensions EXCLUDE_FROM_ALL)

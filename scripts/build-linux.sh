@@ -25,7 +25,9 @@ if command -v apt-get &> /dev/null; then
     libxrandr-dev \
     libxrender-dev \
     libfontconfig1-dev \
-    libfreetype6-dev
+    libfreetype6-dev \
+    libcurl4-openssl-dev \
+    libgtk-3-dev
 fi
 
 SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )"
@@ -40,7 +42,7 @@ cmake -B "$BUILD_DIR" -DCMAKE_BUILD_TYPE=Release
 
 # 2. Compile in Parallel
 echo ">> Compiling plugins & standalone app..."
-cmake --build "$BUILD_DIR" --config Release --parallel
+cmake --build "$BUILD_DIR" --config Release --target MidiFlux_All MidiFlux_CLAP MidiFluxTests --parallel
 
 # 3. Run Automated Tests
 echo ">> Running unit verification tests..."
