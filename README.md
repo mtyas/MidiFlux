@@ -1,10 +1,11 @@
 # 🎹 MidiFlux: Generative Modular MIDI Rack & Harmonic Sequencer
-### Developed by **mtyas** | VST3 • CLAP • Standalone (Windows 64-bit)
+### Developed by **mtyas** | VST3 • CLAP • AU • Standalone (Windows / macOS / Linux)
 
 [![C++20](https://img.shields.io/badge/Language-C%2B%2B20-blue.svg)](https://isocpp.org/)
 [![JUCE 8](https://img.shields.io/badge/Framework-JUCE_8-orange.svg)](https://juce.com/)
 [![Format](https://img.shields.io/badge/Format-VST3_%7C_CLAP_%7C_Standalone-green.svg)](https://github.com/free-audio/clap)
 [![Tests](https://img.shields.io/badge/Tests-13%2F13%20Passing-brightgreen.svg)]()
+[![Latest Release](https://img.shields.io/github/v/release/mtyas/MidiFlux?color=brightgreen&label=Release%20v1.0.0)](https://github.com/mtyas/MidiFlux/releases/latest)
 [![Brand](https://img.shields.io/badge/Brand-mtyas-purple.svg)]()
 
 ---
@@ -40,6 +41,18 @@ Featuring **16 specialized processing blocks**, independent **Series / Parallel 
 
 ---
 
+## 📦 Downloads & Pre-Built Binaries
+
+Pre-compiled production releases for Windows, macOS, and Linux are available from the [**MidiFlux Releases Page**](https://github.com/mtyas/MidiFlux/releases/latest):
+
+| OS / Platform | Download Package | Included Formats | Architecture |
+| :--- | :--- | :--- | :--- |
+| **Windows** | [📥 **MidiFlux-v1.0.0-Windows.zip**](https://github.com/mtyas/MidiFlux/releases/download/v1.0.0/MidiFlux-v1.0.0-Windows.zip) | VST3, CLAP, Standalone (`MidiFlux.exe`) | x86_64 |
+| **macOS** | [📥 **MidiFlux-v1.0.0-macOS-Universal.zip**](https://github.com/mtyas/MidiFlux/releases/download/v1.0.0/MidiFlux-v1.0.0-macOS-Universal.zip) | VST3, CLAP, AudioUnit (`.component`), Standalone (`MidiFlux.app`) | Universal (Apple Silicon & Intel) |
+| **Linux** | [📥 **MidiFlux-v1.0.0-Linux-x64.zip**](https://github.com/mtyas/MidiFlux/releases/download/v1.0.0/MidiFlux-v1.0.0-Linux-x64.zip) | VST3, CLAP, Standalone | x86_64 |
+
+---
+
 ## ✨ Key Highlights
 
 - **16 Modular Processing Blocks**:
@@ -62,41 +75,35 @@ Featuring **16 specialized processing blocks**, independent **Series / Parallel 
 
 ---
 
+## 🛠️ Building From Source
+
+### Prerequisites:
+- CMake 3.22 or newer
+- C++20 compatible compiler (MSVC 2022, Clang 14+, or GCC 11+)
+- Git with submodules
+
+### Build Instructions:
+```bash
+# 1. Clone repository with submodules
+git clone --recursive https://github.com/mtyas/MidiFlux.git
+cd MidiFlux
+
+# 2. Configure with CMake
+cmake -B build -DCMAKE_BUILD_TYPE=Release
+
+# 3. Compile Release binaries
+cmake --build build --config Release --target MidiFlux_All MidiFlux_CLAP MidiFluxTests --parallel
+
+# 4. Run automated test suite
+./build/Release/MidiFluxTests.exe
+```
+
+---
+
 ## 📖 Complete Documentation & Marketing
 
 - Detailed User Manual: **[`MANUAL.md`](MANUAL.md)**
 - Promotional Material & Press Kit: **[`PROMO.md`](PROMO.md)**
-
----
-
-## 🛠️ Building From Source
-
-### Prerequisites:
-- Windows 10 or 11 (64-bit)
-- Visual Studio 2022 (MSVC C++ x64)
-- CMake 3.22 or newer
-- Git
-
-### Build Instructions:
-```powershell
-# 1. Clone repository
-git clone https://github.com/mtyas/MidiFlux.git
-cd MidiFlux
-
-# 2. Configure with CMake
-cmake -B build -G "Visual Studio 17 2022" -A x64
-
-# 3. Compile Release binaries
-cmake --build build --config Release --parallel
-
-# 4. Run automated test suite
-.\build\Release\MidiFluxTests.exe
-```
-
-### Generated Binaries:
-- **VST3**: `build/MidiFlux_artefacts/Release/VST3/MidiFlux.vst3`
-- **CLAP**: `build/MidiFlux_artefacts/Release/CLAP/MidiFlux.clap`
-- **Standalone**: `build/MidiFlux_artefacts/Release/Standalone/MidiFlux.exe`
 
 ---
 
