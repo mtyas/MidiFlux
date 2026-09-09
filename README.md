@@ -18,7 +18,7 @@ Featuring **16 specialized processing blocks**, independent **Series / Parallel 
 
 ## 📸 Architecture & Interface
 
-![MidiFlux Interface](docs/images/midiflux_screenshot.png)
+<img src="docs/images/midiflux_screenshot.png" alt="MidiFlux Interface" width="100%">
 
 ```
 +----------------------------------------------------------------------------------------------------+
