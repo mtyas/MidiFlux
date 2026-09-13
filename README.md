@@ -107,6 +107,14 @@ cmake --build build --config Release --target MidiFlux_All MidiFlux_CLAP MidiFlu
 
 ---
 
+## Support & Donations
+
+To support my work and encourage me to do more, please consider leaving a tip at [https://ko-fi.com/mtyas](https://ko-fi.com/mtyas).
+
+[![Support on Ko-fi](https://img.shields.io/badge/Ko--fi-Support%20My%20Work-ff5e5b?logo=ko-fi&logoColor=white)](https://ko-fi.com/mtyas)
+
+---
+
 ## 📄 License & Attribution
 
 Developed by **mtyas**. Built with the JUCE 8 Framework and clap-juce-extensions. All rights reserved.
